@@ -1,0 +1,12 @@
+extends:
+  - eslint:recommended
+  - plugin:coffee/all
+  - plugin:coffee/prettier
+rules:
+  coffee/no-default-export: off
+  coffee/no-anonymous-default-export: off
+  coffee/no-commonjs: off
+  coffee/require-jsdoc: off
+env:
+  jest: true
+  node: true

@@ -1,0 +1,39 @@
+{
+  "name": "babel-plugin-transform-react-display-name-pipe",
+  "version": "0.0.0-development",
+  "description": "A Babel plugin to add a display name to function components built using a utility function like lodash/fp flow().",
+  "main": "lib/index.js",
+  "repository": "https://github.com/helixbass/babel-plugin-transform-react-display-name-pipe",
+  "author": "Julian Rosse",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "coffee --transpile -o lib/ -c src/",
+    "watch": "coffee -o lib/ -wc src/",
+    "prepublish": "npm run build",
+    "test": "jest"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "babel-plugin",
+    "react"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "coffeescript": "github:helixbass/coffeescript#cbaf4303",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-coffee": "^0.0.10",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.0.0",
+    "prettier": "github:helixbass/prettier#395e5d5c",
+    "prettier-plugin-coffeescript": "^0.0.5"
+  }
+}
