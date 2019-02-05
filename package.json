@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-react-display-name-pipe",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "A Babel plugin to add a display name to function components built using a utility function like lodash/fp flow().",
   "main": "lib/index.js",
   "repository": "https://github.com/helixbass/babel-plugin-transform-react-display-name-pipe",
