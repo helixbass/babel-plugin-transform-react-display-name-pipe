@@ -15,7 +15,7 @@ export default ({types: t}) ->
       return unless init.type is 'CallExpression'
       return unless (
         init.callee.type is 'Identifier' and
-        init.callee.name in ['flow', 'pipe']
+        init.callee.name in ['flow', 'pipe', 'flowMax']
       )
       parentPath.insertAfter(
         t.expressionStatement(

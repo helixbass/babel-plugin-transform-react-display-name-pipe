@@ -23,3 +23,15 @@ it 'works on pipe()', ->
     {plugins}
   )
   expect(code).toMatchSnapshot()
+
+it 'works on flowMax()', ->
+  {code} = babel.transform(
+    """
+    const Comp = flowMax(
+      something => great,
+      ({name}) => <div>{name}</div>
+    )
+  """
+    {plugins}
+  )
+  expect(code).toMatchSnapshot()
