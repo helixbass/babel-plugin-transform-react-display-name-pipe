@@ -11,8 +11,8 @@ export default ({types: t}) ->
 
   visitor =
     VariableDeclarator: ({node: {id, init}, parentPath}) ->
-      return unless id.type is 'Identifier' and /^[A-Z]/.test id.name
-      return unless init.type is 'CallExpression'
+      return unless id?.type is 'Identifier' and /^[A-Z]/.test id.name
+      return unless init?.type is 'CallExpression'
       return unless (
         init.callee.type is 'Identifier' and
         init.callee.name in ['flow', 'pipe', 'flowMax']
