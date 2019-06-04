@@ -18,11 +18,20 @@ export default ({types: t}) ->
         init.callee.name in ['flow', 'pipe', 'flowMax']
       )
       parentPath.insertAfter(
-        t.expressionStatement(
-          t.assignmentExpression(
-            '='
+        t.ifStatement(
+          t.unaryExpression(
+            '!'
             t.memberExpression t.identifier(id.name), t.identifier 'displayName'
-            t.stringLiteral id.name
+          )
+          t.expressionStatement(
+            t.assignmentExpression(
+              '='
+              t.memberExpression(
+                t.identifier id.name
+                t.identifier 'displayName'
+              )
+              t.stringLiteral id.name
+            )
           )
         )
       )
